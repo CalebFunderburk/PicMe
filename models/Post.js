@@ -5,7 +5,7 @@ class Post extends Model {}
 Post.init(
     {
         id: {
-            type: DataTypes.INTGER,
+            type: DataTypes.INTEGER,
         },
         post_url: {
             type: DataTypes.STRING
