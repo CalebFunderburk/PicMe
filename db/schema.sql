@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS picMe_db;
+
+CREATE DATABASE picMe_db;
