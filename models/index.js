@@ -16,3 +16,5 @@ Category.belongsToMany(Post, {
     foreignKey: 'post_id',
     onDelete: 'SET NULL'
 })
+
+module.exports = {User, Post, Category};
