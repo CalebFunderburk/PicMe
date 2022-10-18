@@ -1,0 +1,32 @@
+{
+  "name": "picme",
+  "version": "1.0.0",
+  "description": "PicMe is an app to connect photographers with both new clients and others to collaborate with on future projects",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CalebFunderburk/PicMe.git"
+  },
+  "author": "Stealth Pirates",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CalebFunderburk/PicMe/issues"
+  },
+  "homepage": "https://github.com/CalebFunderburk/PicMe#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-session-sequelize": "^7.1.5",
+    "date-fns": "^2.29.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.25.2"
+  }
+}
