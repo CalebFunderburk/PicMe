@@ -7,7 +7,7 @@ Post.belongsTo(User, {
     onDelete: 'SET NULL'
 })
 
-User.belongsToMany(post, {
+User.belongsToMany(Post, {
     foreignKey: 'user_id',
     onDelete: 'SET NULL'
 })

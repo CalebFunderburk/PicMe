@@ -1,7 +1,11 @@
+// Dependencies
 const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection')
 
+// Class definition
 class User extends Model {}
 
+// Model parameters
 User.init(
     {
         id: {

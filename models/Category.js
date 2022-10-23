@@ -1,7 +1,11 @@
+// Dependencies
 const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection')
 
+// Class definition
 class Category extends Model {}
 
+// Model parameters
 Category.init(
   {
     id: {
