@@ -18,7 +18,7 @@ Category.init(
       type: DataTypes.STRING(25),
       allowNull: false,
       validate: {
-        isNumeric: false
+        len: [4]
       }
     }, 
     user_id: {

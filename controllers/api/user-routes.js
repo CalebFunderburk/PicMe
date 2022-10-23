@@ -18,6 +18,9 @@ router.get('/', (req, res) => {
 // Get one user
 router.get('/:id', (req, res) => {
     User.findOne({
+        where: {
+            id: req.params.id
+        },
         include: [
             {
                 model: Post,
@@ -27,10 +30,10 @@ router.get('/:id', (req, res) => {
     })
     .then(userData => {
         if (!userData) {
-            res.status(404).json({ message: 'No user found with htis id' })
+            res.status(404).json({ message: 'No user found with this id' })
             return
         }
-        res,json(userData)
+        res.json(userData)
     })
     .catch(err => {
         console.log(err)

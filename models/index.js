@@ -1,32 +1,24 @@
+// Models
 const User = require('./User')
 const Post = require('./Post')
 const Category = require('./Category')
 
-// User.hasMany(Post, {
-//     foreignKey: 'post_id',
-//     onDelete: 'SET NULL'
-// })
+// Associations
+User.hasMany(Post, {
+    foreignKey: 'user_id'
+})
 
-// Post.belongsTo(User, {
-//     foreignKey: 'user_id',
-//     onDelete: 'SET NULL'
-// })
+Post.belongsTo(User, {
+    foreignKey: 'post_id'
+})
 
-// Category.belongsTo(Post, {
-//     foreignKey: 'post_id',
-//     onDelete: 'SET NULL'
-// })
+Category.belongsTo(Post, {
+    foreignKey: 'post_id',
+    onDelete: 'SET NULL'
+})
 
-// Post.hasMany(Category, {
-//     foreignKey: 'category_id',
-//     onDelete: 'SET NULL'
-// })
+Post.hasMany(Category, {
+    foreignKey: 'category_id'
+})
 
-// Category.belongsToMany(Post, {
-//     through: Category,
-//     as: 'catgories',
-//     foreignKey: 'category_id',
-//     onDelete: 'SET NULL' 
-// })
-
-module.exports = {User, Post, Category };
+module.exports = { User, Post, Category };

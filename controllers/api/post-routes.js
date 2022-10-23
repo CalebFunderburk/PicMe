@@ -1,6 +1,6 @@
 // Dependencies
 const router = require('express').Router()
-const { Post } = require('../../models')
+const { Post, User } = require('../../models')
 
 // Get all posts
 router.get('/', (req, res) => {
@@ -20,11 +20,11 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['id', 'desc', 'image_path', 'user_id']
+        attributes: ['id', 'desc', 'image_path', 'user_id'],
     })
     .then(postData => {
         if (!postData) {
-            res.status(404).json({ message: 'No image found with this id' })
+            res.status(404).json({ message: 'No post found with this id' })
             return
         }
         res.json(postData)
