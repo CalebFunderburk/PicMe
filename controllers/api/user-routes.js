@@ -1,3 +1,4 @@
+// Dependencies
 const router = require('express').Router()
 const { User, Post } = require('../../models')
 const bcrypt = require('bcrypt')
