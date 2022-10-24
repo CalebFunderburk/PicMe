@@ -24,6 +24,21 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false
         },
+        title: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [2]
+            }
+        },
+        content: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [2]
+            }
+        },
+
         user_id: {
             type: DataTypes.INTEGER,
             allowNull:false,
