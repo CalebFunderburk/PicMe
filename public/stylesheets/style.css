@@ -1,9 +1,9 @@
-*{
+ *{
     box-sizing: border-box;
     }
 
 /*-- Dashboard CSS --*/
-* {
+ * {
     margin: 0;
     padding: 0;
 }
@@ -65,7 +65,7 @@
     border: 2px solid grey;
     border-radius: 9px;
 }
-
+ 
 
 
 /* -- Landing Page styling --*/
