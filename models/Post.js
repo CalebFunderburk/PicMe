@@ -10,9 +10,12 @@ Post.init(
     {
         id: {
             type: DataTypes.INTEGER,
+<<<<<<< HEAD
+=======
             primaryKey: true,
             autoIncrement: true,
             allowNull: false
+>>>>>>> e99376de1d8d38292300bbdaff6bf39d5a2160d0
         },
         desc: {
             type: DataTypes.STRING(60)

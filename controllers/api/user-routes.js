@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+const router = require('express').Router();
+const { User, Post } = require('../../models');
+
+
+
+module.exports = router;
+=======
 // Dependencies
 const router = require('express').Router()
 const { User, Post } = require('../../models')
@@ -134,3 +142,4 @@ router.delete('/:id', (req, res) => {
 })
 
 module.exports = router
+>>>>>>> e99376de1d8d38292300bbdaff6bf39d5a2160d0
