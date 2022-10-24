@@ -1,6 +1,7 @@
 // Dependencies
 const router = require('express').Router()
 const { Category } = require('../../models')
+const withAuth = require('../../utils/auth');
 
 // Get all categories
 router.get('/', (req, res) => {
@@ -36,7 +37,7 @@ router.get('/:id', (req, res) => {
 })
 
 // Create a category
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     Category.create({
         category_name: req.body.category_name
     })
@@ -48,7 +49,7 @@ router.post('/', (req, res) => {
 })
 
 // Update a category
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Category.update(
         {
             category_name: req.body.category_name
@@ -73,7 +74,7 @@ router.put('/:id', (req, res) => {
 })
 
 // Delete a category
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     Category.destroy({
         where: {
             id: req.params.id

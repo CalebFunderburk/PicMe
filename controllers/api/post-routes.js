@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-const router = require('express').Router();
-const sequelize = require('../../config/connection');
 
-
-module.exports = router;
-=======
 // Dependencies
 const router = require('express').Router()
 const { Post, User } = require('../../models')
+const withAuth = require('../../utils/auth');
 
 // Get all posts
 router.get('/', (req, res) => {
@@ -43,7 +38,7 @@ router.get('/:id', (req, res) => {
 })
 
 // Create a post
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     Post.create({
         desc: req.body.desc,
         image_path: req.body.image_path,
@@ -58,7 +53,7 @@ router.post('/', (req, res) => {
 })
 
 // Update a post
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Post.update(
         {
             desc: req.body.desc,
@@ -84,7 +79,7 @@ router.put('/:id', (req, res) => {
 })
 
 // Delete a post
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     Post.destroy({
         where: {
             id: req.params.id
@@ -104,4 +99,4 @@ router.delete('/:id', (req, res) => {
 })
 
 module.exports = router
->>>>>>> e99376de1d8d38292300bbdaff6bf39d5a2160d0
+
