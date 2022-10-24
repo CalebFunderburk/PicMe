@@ -39,6 +39,14 @@ User.init(
             validate: {
                 len: [4]
             }
+        },
+        bio: {
+            type: DataTypes.TEXT,
+            allowNull: true,         
+        },
+        website: {
+            type: DataTypes.STRING,
+            allowNull: true,
         }
     },
     {
