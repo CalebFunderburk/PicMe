@@ -1,4 +1,3 @@
-
 // Dependencies
 const router = require('express').Router()
 const { Post, User } = require('../../models')
@@ -99,4 +98,3 @@ router.delete('/:id', withAuth, (req, res) => {
 })
 
 module.exports = router
-

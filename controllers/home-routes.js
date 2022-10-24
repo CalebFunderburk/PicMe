@@ -1,4 +1,3 @@
-
 const router = require('express').Router()
 const { User, Post, Category } = require('../models')
 
@@ -15,4 +14,3 @@ router.get('/login', (req, res) => {
 })
 
 module.exports = router
-
