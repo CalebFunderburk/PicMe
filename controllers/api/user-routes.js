@@ -1,12 +1,11 @@
 // Dependencies
 const router = require('express').Router()
 const { User, Post } = require('../../models')
-const bcrypt = require('bcrypt')
 
 // Get all users
 router.get('/', (req, res) => {
     User.findAll({
-        attributes: { exclude: ['password'] }
+        
     })
     .then(userData => res.json(userData))
     .catch(err => {
@@ -53,6 +52,48 @@ router.post('/', (req, res) => {
         console.log(err)
         res.status(500).json(err)
     })
+})
+
+// Route to login
+router.post('/login', (req, res) => {
+    User.findOne({
+        where: {
+            email: req.body.email
+        }
+    })
+    .then(userData => {
+        if (!userData) {
+            res.status(400).json({ message: 'No user found with that email address!' })
+            return
+        }
+
+        const validPassword = userData.checkPassword(req.body.password)
+
+        if (!validPassword) {
+            res.status(400).json({ message: 'Incorrect password!' })
+            return
+        }
+
+        req.session.save(() => {
+            req.session.user_id = userData.id
+            req.session.username = userData.username
+            req.session.loggedIn = true
+
+            res.json({ user: userData, message: 'You are now logged in!' })
+        })
+    })
+})
+
+// Route to logout
+router.post('/logout', (req, res) => {
+    if (req.session.loggedIn) {
+        req.session.destroy(() => {
+            res.status(204).end()
+        })
+    }
+    else {
+        res.status(404).end()
+    }
 })
 
 // Update a user
