@@ -1,24 +1,39 @@
+// Dependencies
 const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection')
 
+// Class definition
 class Post extends Model {}
 
+// Model parameters
 Post.init(
     {
         id: {
             type: DataTypes.INTEGER,
+<<<<<<< HEAD
+=======
+            primaryKey: true,
+            autoIncrement: true,
+            allowNull: false
+>>>>>>> e99376de1d8d38292300bbdaff6bf39d5a2160d0
         },
-        post_url: {
-            type: DataTypes.STRING
+        desc: {
+            type: DataTypes.STRING(60)
+        },
+        image_path: {
+            type: DataTypes.STRING,
+            allowNull: false
         },
         user_id: {
             type: DataTypes.INTEGER,
+            allowNull:false,
             reference: {
                 model: 'user',
                 key: 'id'
             }
         },
         category_id: {
-            type: Datatypes.INTEGER,
+            type: DataTypes.INTEGER,
             reference: {
                 model: 'category',
                 key: 'id'
@@ -27,6 +42,7 @@ Post.init(
     },
     {
         sequelize,
+        timestamps: true,
         freezeTableName: true,
         underscored: true,
         modelName: 'post'
