@@ -1,5 +1,5 @@
 // Dependencies
-const { Category } = require('../models')
+const { Follow } = require('../models')
 
 // Data to insert
 const categoryData = [
@@ -14,6 +14,6 @@ const categoryData = [
     }
 ]
 
-const seedCategories = () => Category.bulkCreate(categoryData)
+const seedCategories = () => Category.bulkCreate(followData)
 
 module.exports = seedCategories

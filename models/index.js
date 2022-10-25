@@ -1,24 +1,24 @@
 // Models
 const User = require('./User')
-const Post = require('./Post')
-const Category = require('./Category')
+const Message = require('./Message')
+const Follow = require('./Follow')
 
 // Associations
-User.hasMany(Post, {
+/*User.hasMany(Message, {
     foreignKey: 'user_id'
 })
 
-Post.belongsTo(User, {
-    foreignKey: 'post_id'
+Message.belongsTo(User, {
+    foreignKey: 'message_id'
 })
 
-Category.belongsTo(Post, {
-    foreignKey: 'post_id',
+Follow.belongsTo(Message, {
+    foreignKey: 'message_id',
     onDelete: 'SET NULL'
 })
 
-Post.hasMany(Category, {
-    foreignKey: 'category_id'
-})
+Message.hasMany(Follow, {
+    foreignKey: 'follow_id'
+})*/
 
-module.exports = { User, Post, Category };
+module.exports = { User, Message, Follow };

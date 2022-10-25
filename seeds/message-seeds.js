@@ -1,5 +1,5 @@
 // Dependencies
-const { Post } = require('../models');
+const { Message } = require('../models');
 
 // Data to insert
 const postdata = [
@@ -10,6 +10,6 @@ const postdata = [
     }
 ];
 
-const seedPosts = () => Post.bulkCreate(postdata)
+const seedPosts = () => Post.bulkCreate(messagedata)
 
 module.exports = seedPosts;
