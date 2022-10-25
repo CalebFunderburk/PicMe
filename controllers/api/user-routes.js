@@ -1,6 +1,6 @@
 // Dependencies
 const router = require('express').Router()
-const { User, Post } = require('../../models')
+const { User, Message } = require('../../models')
 
 // Get all users
 router.get('/', (req, res) => {
@@ -23,7 +23,7 @@ router.get('/:id', (req, res) => {
         include: [
             {
                 model: Post,
-                attributes: ['id', 'desc', 'image_path', 'category_id']
+                attributes: ['id', 'desc', 'image_path', 'follow_id']
             }
         ]
     })

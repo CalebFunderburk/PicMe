@@ -1,34 +1,34 @@
 // Dependencies
 const router = require('express').Router()
-const { Category } = require('../../models')
+const { Follow } = require('../../models')
 const withAuth = require('../../utils/auth');
 
-// Get all categories
+// Get all follows
 router.get('/', (req, res) => {
-    Category.findAll({
-        attributes: ['category_name']
+    Follow.findAll({
+        attributes: ['user_id']
     })
-    .then(categoryData => res.json(categoryData))
+    .then(followData => res.json(followData))
     .catch(err => {
         console.log(err)
         res.status(500).json(err)
     })
 })
 
-// Get one category
+// Get one follow
 router.get('/:id', (req, res) => {
-    Category.findOne({
+    Follow.findOne({
         where:{
             id: req.params.id
         },
-        attributes: ['category_name']
+        attributes: ['user_id']
     })
-    .then(categoryData => {
-        if (!categoryData) {
-            res.status(404).json({ message: 'No category found with this id' })
+    .then(followData => {
+        if (!followData) {
+            res.status(404).json({ message: 'No follow found with this id' })
             return
         }
-        res.json(categoryData)
+        res.json(followData)
     })
     .catch(err => {
         console.log(err)
@@ -36,23 +36,23 @@ router.get('/:id', (req, res) => {
     })
 })
 
-// Create a category
+// Create a follow
 router.post('/', withAuth, (req, res) => {
-    Category.create({
-        category_name: req.body.category_name
+    Follow.create({
+        user_id: req.body.user_id
     })
-    .then(categoryData => res.json(categoryData))
+    .then(followData => res.json(followData))
     .catch(err => {
         console.log(err)
         res.status(500).json(err)
     })
 })
 
-// Update a category
+// Update a follow
 router.put('/:id', withAuth, (req, res) => {
-    Category.update(
+    Follow.update(
         {
-            category_name: req.body.category_name
+            user_id: req.body.user_id
         },
         {
             where: {
@@ -60,12 +60,12 @@ router.put('/:id', withAuth, (req, res) => {
             }
         }
     )
-    .then(categoryData => {
-        if (!categoryData) {
-            res.status(404).json({ message: 'No category found with this id' })
+    .then(followData => {
+        if (!followData) {
+            res.status(404).json({ message: 'No follow found with this id' })
             return
         }
-        res.json(categoryData)
+        res.json(followData)
     })
     .catch(err => {
         console.log(err)
@@ -73,19 +73,19 @@ router.put('/:id', withAuth, (req, res) => {
     })
 })
 
-// Delete a category
+// Delete a follow
 router.delete('/:id', withAuth, (req, res) => {
-    Category.destroy({
+    Follow.destroy({
         where: {
             id: req.params.id
         }
     })
-    .then(categoryData => {
-        if (!categoryData) {
-            res.status(404).json({ message: 'No categpry found with this id' })
+    .then(followData => {
+        if (!followData) {
+            res.status(404).json({ message: 'No follow found with this id' })
             return
         }
-        res.json(categoryData)
+        res.json(followData)
     })
     .catch(err => {
         console.log(err)

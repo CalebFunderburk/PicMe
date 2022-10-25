@@ -3,12 +3,12 @@ const router = require('express').Router();
 
 // Modular functions
 const userRoutes = require('./user-routes.js');
-const postRoutes = require('./post-routes.js');
-const categoryRoutes = require('./category-routes')
+const messageRoutes = require('./message-routes.js');
+const followRoutes = require('./follow-routes')
 
 // Plugins
 router.use('/users', userRoutes);
-router.use('/posts', postRoutes);
-router.use('/categories', categoryRoutes)
+router.use('/messages', messageRoutes);
+router.use('/follows', followRoutes)
 
 module.exports = router;

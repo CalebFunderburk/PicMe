@@ -3,10 +3,10 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection')
 
 // Class definition
-class Category extends Model {}
+class Follow extends Model {}
 
 // Model parameters
-Category.init(
+Follow.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -14,35 +14,22 @@ Category.init(
       autoIncrement: true,
       allowNull: false
     },
-    category_name: {
-      type: DataTypes.STRING(25),
-      allowNull: false,
-      validate: {
-        len: [4]
-      }
-    }, 
     user_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.INTEGER, 
+      allowNull: false,
       references: {
         model: 'user',
         key: 'id'
       }
-    },
-    post_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'post',
-        key: 'id'
-      }
-    },
+    }
   },
   {
   sequelize,
   timestamps: false,
   freezeTableName: true,
   underscored: true,
-  modelName: 'category'
+  modelName: 'follow'
   }
 );
 
-module.exports = Category;
+module.exports = Follow;
