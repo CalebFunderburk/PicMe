@@ -2,14 +2,16 @@
 const router = require('express').Router();
 
 // Modular function
-const homeRoutes = require('./home-routes');
+const landingRoutes = require('./landing-routes');
 const apiRoutes = require('./api/');
 const dashboardRoutes = require('./dashboard-routes')
+const profileRoutes = require('./profile-routes')
 
 // Plugins
-router.use('/', homeRoutes);
+router.use('/', landingRoutes);
 router.use('/api', apiRoutes);
-// router.use('/dashboard', dashboardRoutes)
+router.use('/dashboard', dashboardRoutes)
+router.use('/profile', profileRoutes)
 
 router.use((req, res) => {
     res.status(404).end()

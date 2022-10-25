@@ -3,7 +3,7 @@ const { User, Message, Follow } = require('../models')
 
 router.get('/', (req, res) => {
     if (req.session.loggedIn) {
-        res.render('dashboard', {
+        res.render('profile', {
             loggedIn: req.session.loggedIn
         })
         return
