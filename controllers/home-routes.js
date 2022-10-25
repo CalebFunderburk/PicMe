@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { User, Post, Category } = require('../models')
+const { User, Message, Follow } = require('../models')
 
 router.get('/', (req, res) => {
     console.log(req.session)
