@@ -5,7 +5,7 @@ const { User, Message } = require('../../models')
 // Get all users
 router.get('/', (req, res) => {
     User.findAll({
-        
+        // attributes: { exclude: ['password'] }
     })
     .then(userData => res.json(userData))
     .catch(err => {
@@ -22,8 +22,8 @@ router.get('/:id', (req, res) => {
         },
         include: [
             {
-                model: Post,
-                attributes: ['id', 'desc', 'image_path', 'follow_id']
+                model: Message,
+                attributes: ['message']
             }
         ]
     })
@@ -75,8 +75,8 @@ router.post('/login', (req, res) => {
         }
 
         req.session.save(() => {
-            req.session.user_id = userData.id
-            req.session.username = userData.username
+            req.session.user_id = userData.id,
+            req.session.username = userData.username,
             req.session.loggedIn = true
 
             res.json({ user: userData, message: 'You are now logged in!' })

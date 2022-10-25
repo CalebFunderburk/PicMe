@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth');
 // Get all messages
 router.get('/', (req, res) => {
     Message.findAll({
-        attributes: ['message']
+        attributes: ['id', 'message', 'user_id']
     })
     .then(messageData => res.json(messageData))
     .catch(err => {
@@ -21,7 +21,7 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['message'],
+        attributes: ['id', 'message', 'user_id'],
     })
     .then(messageData => {
         if (!messageData) {
@@ -37,12 +37,10 @@ router.get('/:id', (req, res) => {
 })
 
 // Create a message
-router.message('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
     Message.create({
-        desc: req.body.desc,
-        image_path: req.body.image_path,
-        user_id: req.body.user_id,
-        category_id: req.body.category_id
+        message: req.body.message,
+        user_id: req.body.user_id
     })
     .then(messageData => res.json(messageData))
     .catch(err => {
@@ -52,7 +50,7 @@ router.message('/', withAuth, (req, res) => {
 })
 
 // Update a message
-router.put('/:id', withAuth, (req, res) => {
+router.put('/:id', (req, res) => {
     Message.update(
         {
             message: req.body.message
@@ -77,7 +75,7 @@ router.put('/:id', withAuth, (req, res) => {
 })
 
 // Delete a message
-router.delete('/:id', withAuth, (req, res) => {
+router.delete('/:id', (req, res) => {
     Message.destroy({
         where: {
             id: req.params.id
