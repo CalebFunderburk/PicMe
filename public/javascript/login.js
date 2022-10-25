@@ -1,5 +1,3 @@
-
-
 // Login logic
 async function loginFormHandler(event) {
     event.preventDefault()

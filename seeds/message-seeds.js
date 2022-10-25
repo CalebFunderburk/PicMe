@@ -2,14 +2,17 @@
 const { Message } = require('../models');
 
 // Data to insert
-const postdata = [
+const messageData = [
     {
-        desc: 'Look at this cool picture!',
-        image_path: '*Image here*',
+        message: 'Hey man! How are you doing today?',
+        user_id: 2
+    },
+    {
+        message: 'Im well! how are you?',
         user_id: 1
     }
 ];
 
-const seedPosts = () => Post.bulkCreate(messagedata)
+const seedMessages = () => Message.bulkCreate(messageData)
 
-module.exports = seedPosts;
+module.exports = seedMessages;

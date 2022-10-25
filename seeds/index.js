@@ -3,8 +3,8 @@ const sequelize = require('../config/connection')
 
 // Modular functions
 const seedUsers = require('./user-seeds');
-const seedPosts = require('./post-seeds');
-const seedCategories = require('./category-seeds')
+const seedMessages = require('./message-seeds');
+const seedFollows = require('./follow-seeds')
 
 // Seed all tables in database
 const seedAll = async () => {
@@ -14,11 +14,11 @@ const seedAll = async () => {
     await seedUsers()
     console.log('USERS SEEDED')
 
-    await seedPosts()
-    console.log('POSTS SEEDED')
+    await seedMessages()
+    console.log('MESSAGES SEEDED')
 
-    await seedCategories()
-    console.log('CATEGORIES SEEDED')
+    await seedFollows()
+    console.log('FOLLOWS SEEDED')
 
     process.exit(0)
 }

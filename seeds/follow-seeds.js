@@ -2,18 +2,15 @@
 const { Follow } = require('../models')
 
 // Data to insert
-const categoryData = [
+const followData = [
     {
-        category_name: 'Sports'
+        user_id: 1
     },
     {
-        category_name: 'Action'
-    },
-    {
-        category_name: 'Outdoors'
+        user_id: 2
     }
 ]
 
-const seedCategories = () => Category.bulkCreate(followData)
+const seedFollows = () => Follow.bulkCreate(followData)
 
-module.exports = seedCategories
+module.exports = seedFollows
