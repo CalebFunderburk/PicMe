@@ -21,6 +21,10 @@ Follow.init(
         model: 'user',
         key: 'id'
       }
+    },
+    recipient: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     }
   },
   {
