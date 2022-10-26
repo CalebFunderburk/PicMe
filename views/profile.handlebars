@@ -7,27 +7,29 @@
                     <div class="form-group row p-3 mb-2">
                       <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Username:</label>
                       <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="username" value="{{user.username}}">
+                        <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="username" value={{user.username}}>
                       </div>
                     </div>
                     <div class="form-group row p-3 mb-2">
                         <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
                         <div class="col-sm-10">
-                          <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="email" value="{{user.email}}">
+                          <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="email" value={{user.email}}>
                         </div>
                       </div>
                       <div class="form-group row p-3 mb-2">
                         <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Bio</label>
                         <div class="col-sm-10">
-                          <input type="text-area" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Bio" value="{{user.bio}}">
+                          <input type="text-area" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Bio" value={{user.bio}}>
                         </div>
                       </div>
                       <div class="form-group row p-3 mb-2 ">
                         <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Website:</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="website url" value="{{user.website}}">
+                          <input type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="website url" value={{user.website}}>
                         </div>
                       </div>
+
+                      <button type="submit" class="btn" id="update-user">Update Profile</button>
                   </form>
               </div>
             </section>
@@ -35,4 +37,5 @@
 
 {{#if loggedIn}}
 <script src="/javascript/edit-user.js"></script>
+<script src="/javascript/add-post.js"></script>
 {{/if}}

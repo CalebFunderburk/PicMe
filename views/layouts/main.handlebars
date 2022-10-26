@@ -18,7 +18,7 @@
 
 <body>
     
-  
+  {{#if loggedIn}}
       <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light shadow sticky-top" style="background-color: skyblue;">
         <div class="container">
@@ -50,13 +50,13 @@
             </div>
         </div>
     </nav>
-    
+    {{/if}}
 
         <!-- Header -->
-            {{!-- <header>
-                <h1>
+          {{!-- <header>
+               <h1>
                     <a href="/dashboard">home</a>
-                </h1> 
+                </h1>  
                 <nav>
                     {{#if loggedIn}}
                     <a href="/profile">Profile</a>
@@ -65,9 +65,9 @@
                     <a href="/">login</a>
                     {{/if}}
                 </nav>
-            </header> --}}
+            </header>  --}}
 
-        <!-- Main Body -->       
+        <!-- Main Body -->      
         <main class="container-fluid">
             {{{ body }}}
         </main>
