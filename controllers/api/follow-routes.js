@@ -1,7 +1,7 @@
 // Dependencies
-const router = require('express').Router()
+const router = require('express').Router();
 const { id } = require('date-fns/locale');
-const { Follow } = require('../../models')
+const { Follow } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // Get all follows
