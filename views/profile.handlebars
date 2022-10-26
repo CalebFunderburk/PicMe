@@ -1,38 +1,4 @@
 <!-- This is your profile page -->
-
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light shadow sticky-top" style="background-color: skyblue;">
-        <div class="container">
-            <a class="navbar-brand text-light" href="#">PicMe</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-
-                        <a class="nav-link text-light" href="./add-post"><i class="fa-regular fa-square-plus"></i> Add
-                            Post <span class="sr-only">(current)</span></a>
-
-                    </li>
-                    <li class="nav-item">
-
-                        <a class="nav-link text-light" href="./profile"><i class="fa-solid fa-house-user"></i>
-                            Profile</a>
-
-                    </li>
-                    <li class="nav-item">
-
-                        <a class="nav-link text-light" href="#">Logout</a>
-
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
     
 
 <!-- User Profile Info Section-->
@@ -72,4 +38,5 @@
 
 {{#if loggedIn}}
 <script src="/javascript/edit-user.js"></script>
+<script src="/javascript/add-post.js"></script>
 {{/if}}
