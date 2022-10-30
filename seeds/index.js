@@ -1,30 +1,26 @@
-// Dependencies
-const sequelize = require('../config/connection')
-
-// Modular functions
 const seedUsers = require('./user-seeds');
 const seedPosts = require('./post-seeds');
-const seedComments= require('./comment-seeds')
-const seedLikes = require('./like-seeds');
+const seedComments = require('./comment-seeds');
+const seedVotes = require('./vote-seeds');
 
-// Seed all tables in database
+const sequelize = require('../config/connection');
+
 const seedAll = async () => {
-    await sequelize.sync({ force: true })
-    console.log('DATABASE SYNCED')
+  await sequelize.sync({ force: true });
+  console.log('--------------');
+  await seedUsers();
+  console.log('--------------');
 
-    await seedUsers()
-    console.log('USERS SEEDED')
+  await seedPosts();
+  console.log('--------------');
 
-    await seedPosts()
-    console.log('POSTS SEEDED')
+  await seedComments();
+  console.log('--------------');
 
-    await seedComments()
-    console.log('COMMENTS SEEDED')
+  await seedVotes();
+  console.log('--------------');
 
-    await seedLikes();
-    console.log('LIKES SEEDED')
-
-    process.exit(0)
-}
+  process.exit(0);
+};
 
 seedAll();

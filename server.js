@@ -1,24 +1,14 @@
-// Dependencies
-const express = require('express');
 const path = require('path');
-const exphbs = require('express-handlebars');
+const express = require('express');
 const session = require('express-session');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const exphbs = require('express-handlebars');
 
-// Modular functions
-const sequelize = require('./config/connection');
-
-// Format express
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Format handlebars
-const helpers = require('./utils/helpers');
-const hbs = exphbs.create({ helpers })
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
+const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-// Format session
 const sess = {
   secret: 'Super secret secret',
   cookie: {},
@@ -31,18 +21,22 @@ const sess = {
 
 app.use(session(sess));
 
+const helpers = require('./utils/helpers');
 
+const hbs = exphbs.create({ helpers });
 
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
-// Express middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Activate routes
+//Index Route
+//app.get('/',  (req,res) => res.render('index', {layout: landingpage}));
+
 app.use(require('./controllers/'));
 
-// Sync sync database to the server
-sequelize.sync({ alter: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });

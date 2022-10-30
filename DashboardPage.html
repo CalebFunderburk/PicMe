@@ -15,29 +15,52 @@
     <title>Pic Me</title>
 </head>
 
- <body class="d-flex h-100 text-center text-bg-dark">
-
-  <div class="container-fluid d-flex w-100 h-100 p-3 mx-auto flex-column">
-
-    <!-- Navigation -->
+<body>
+  <div class="wrapper">
 
 
 
-     <header class="mb-auto container-fluid">
-    <div>
-      <a class="nav-link float-md-start mb-0 active" href="/login"><h3>PicMe.</h3></a>
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-        {{#if loggedIn}} 
-        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="/dashboard"><i class="fa-solid fa-square-plus"></i>  Add Post</a>
-      
-        <button id="logout" class="btn btn-link fw-bold py-1 px-2 active">Logout</button>
-        {{else}} 
-        <a class="nav-link fw-bold py-1 px-0" href="/login">Login</a>
-       {{/if}}
-      </nav>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
     </div>
-  </header>
-    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -46,8 +69,7 @@
       {{{ body }}}
     </main>
 
-    
- 
+  
   </div>
   
  <!-- Bootstrap CDN JQuery and Popper Scripts-->

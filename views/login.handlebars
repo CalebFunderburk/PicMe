@@ -1,55 +1,65 @@
-<!-- Full Page Landing Login Content -->
-    <section class="masthead container-fluid" style="background-color: skyblue;">
-        <div class="container">
-            <div class="row h-100 align-items-center">
+<main class="px-3">
+    {{!-- <h1>PicMe.</h1> --}}
+    <h3 class="mb-3"> A new community for photography</h3>
+    <p class="lead">
+        <a href="/learn" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
+    </p>
 
 
-                <!-- This is the phone mockup -->
-                <div class="col mt-5" style="background-color: skyblue;">
-
-                    <img src="/assets/iphone.png" class="img-fluid" />
-                </div>
-
-                <!-- This is the Sign-up/Login form-->
-                <div class="col wrapper login px-1 container-fluid" style="background-color: skyblue;">
-                    <div class="landing-form shadow">
-                        <div class="col-left">
-                            <div class="login-text">
-                                <h2>Welcome!</h2>
-                                <p>Create your account.<br>For Free!</p>
-                                <a href="/signup" class="btn">Sign Up</a>
-                            </div>
-                        </div>
-
-                        <div class="col-right">
-                            <div class="login-form">
-                                <h2>Login</h2>
-                                <form class="login-form">
-                                    <div>
-                                        <label for="email-login">Email address<span>*</span></label>
-                                        <input type="text" id="email-login" placeholder="Email" :>
-                                    </div>
-                                    <div>
-                                        <label>Password<span>*</span></label>
-                                        <input type="password" id="password-login" placeholder="Password" :>
-                                    </div>
-                                    <p>
-                                        <button type="submit">Login</button>
-                                    </p>
-
-                                </form>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-     <script src="/javascript/login.js"></script>
+    <!-- Login and SignUp Section -->
    
+        <div class="row align-items-center mt-4">
 
 
+
+            <div class="container col-md-6 mt-3 mb-2">
+                <h3 class="fw-bold">LOGIN</h3>
+                <p class="text-muted">Please enter your login and password!</p>
+                <form class="login-form ">
+                    <div>
+                        <label for="email-login"></label>
+                        <input type="text" placeholder="email" id="email-login" class="mt-2" />
+                    </div>
+                    <div>
+                        <label for="password-login"></label>
+                        <input type="password" placeholder="password" id="password-login" class="mt-2" />
+                    </div>
+
+                    <div>
+                        <button type="submit" class="px-3 mt-2 fw-bold">login</button>
+                    </div>
+                </form>
+
+                <form class="signup-form mt-5">
+                    <h3 class="fw-bold">New? Join Us!</h3>
+                    <div>
+                        <label for="username-signup"></label>
+                        <input type="text" placeholder="username" id="username-signup" class="mt-2"/>
+                    </div>
+                    <div>
+                        <label for="email-signup"></label>
+                        <input type="text" placeholder="email" id="email-signup" class="mt-2"/>
+                    </div>
+                    <div>
+                        <label for="password-signup"></label>
+                        <input type="password" placeholder="password" id="password-signup" class="mt-2" />
+                    </div>
+
+                    <div>
+                        <button type="submit" class="px-3 mt-2 fw-bold">signup</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Phone Mock-Up section -->
+            <div class="col-md-6 mt-5 mb-5">
+                <img src="/assets/iphone.png" class="img-fluid" />
+            </div>
+
+
+
+    </div>
+
+</main>
+
+<script src="/javascript/login.js"></script>

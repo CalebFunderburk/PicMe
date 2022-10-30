@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  Link to Font Awesome for Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Bootstrap CDN Link-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+
+    <title>Pic Me</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+ <!-- Custom styles for this template -->
+   
+  </head>
+  <body class="d-flex h-100 text-center text-bg-dark">
+    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <a><h3 class="float-md-start mb-0" href="/">PicMe</h3></a>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        {{#if loggedIn}}
+        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="/dashboard">Dashboard</a>
+        <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
+        <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Text -->
+  <main class="px-3">
+    <h1>PicMe.</h1>
+    <p class="lead">PicMe. A new community for photography</p>
+    <p class="lead">
+      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
+    </p>
+ 
+    <!-- Mock App on Phone Section-->
+
+    <div class="col mt-5">
+
+        <img src="/public/assets/iphone.png" class="img-fluid" />
+    </div>
+
+
+<form class= "login-form">
+    <div>
+        <label for= "email-login">email:</label>
+        <input type="text" id="email-login" />
+    </div>
+    <div> 
+        <label for="password-login">password:</label>
+        <input type="text" id="password-login" />
+    </div>
+
+    <div>
+        <button type="submit">login</button>
+    </div>
+</form>
+
+<form class= "signup-form">
+    <div>
+        <label for= "username-signup">username:</label>
+        <input type="text" id="username-signup" />
+    </div>
+     <div>
+        <label for= "email-signup">email:</label>
+        <input type="text" id="email-signup" />
+    </div>
+    <div> 
+        <label for="password-signup">password:</label>
+        <input type="text" id="password-signup" />
+    </div>
+
+    <div>
+        <button type="submit">signup</button>
+    </div>
+</form>
+
+ </main>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Main Body -->
+    <main>
+      {{{ body }}}
+    </main>
+
+  
+  </div>
+  
+ <!-- Bootstrap CDN JQuery and Popper Scripts-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--Script to JS files -->
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+</body>
+
+</html>
