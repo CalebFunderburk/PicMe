@@ -1,9 +1,14 @@
 
+
+
 async function editUserFormHandler(event) {
     event.preventDefault();
 
+    // const userId = res.session.user_id
+
     const website = document.querySelector('input[name="user-website"]').value.trim();
-    const user_bio = document.querySelector('input[name="user-bio"]').value.trim();
+    const bio = document.querySelector('input[name="user-bio"]').value.trim();
+    const email = document.querySelector('input[type="email"]').value.trim();
     const user_id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
     ];
@@ -11,9 +16,9 @@ async function editUserFormHandler(event) {
     const response = await fetch(`/api/users/${user_id}`, {
         method: 'put',
         body: JSON.stringify({
-           
+            email,
             website,
-            user_bio
+            bio
         }),
         headers: {
             'Content-Type': 'application/json'
@@ -21,10 +26,10 @@ async function editUserFormHandler(event) {
     });
 
     if (response.ok) {
-        document.location.replace('/dashboard');
+        document.location.replace('/profile');
     } else {
         alert(response.statusText);
     }
 }
 
-document.querySelector('.edit-user-form').addEventListener('submit', editUserFormHandler);
+document.querySelector('#editProfile').addEventListener('submit', editUserFormHandler);

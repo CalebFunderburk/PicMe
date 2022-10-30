@@ -4,7 +4,7 @@ const router = require('express').Router();
 // Modular function
 const landingRoutes = require('./landing-routes');
 const apiRoutes = require('./api/');
-const dashboardRoutes = require('./dashboard-routes')
+const dashboardRoutes = require('./dashboard-routes');
 const profileRoutes = require('./profile-routes')
 
 // Plugins

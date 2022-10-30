@@ -41,12 +41,10 @@ User.init(
             }
         },
         bio: {
-            type: DataTypes.TEXT,
-            allowNull: true,         
+            type: DataTypes.TEXT      
         },
         website: {
-            type: DataTypes.STRING,
-            allowNull: true,
+            type: DataTypes.STRING
         }
     },
     {

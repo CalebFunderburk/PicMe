@@ -1,67 +1,34 @@
 <!-- User is taken to their dashboard on login -->
 
-  <section class="masthead row container-fluid" style="background-color: skyblue;">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
+
+<!-- This is the Display of the User's Public Profile-->
+                    {{>user-profilecard}}
+
+
+<!-- Display for posts on User's Dashboard -->
+
+<section class="masthead row container-fluid " style="background-color: skyblue;">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
 
 
 
-<section class="messages-section col">
-    <div class="bg-light py-2 shadow">
-        <h1> MESSAGES SECTION GOES HERE? </h1>
+            <section class="posts-section col">
+                <div class="bg-light py-2 px-3 shadow">
+                    <h1>Welcome to PicMe!</h1>
+                    <p class="text-muted">Please add to our community</p>
+                    {{> post-info post}}
 
+                </div>
+            </section>
+
+
+        </div>
+
+    </div>
     </div>
 </section>
 
-
-
-
-
-                <!-- This is the Display of the User's Public Profile-->
-                
-<!-- Card -->
-<div class="card card-image shadow col-md-6 px-2 mt-3 mb-3"
-  style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.webp);">
-
-  <!-- Content -->
-  <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-    <div>
-   <!--   <h4 class="pink-text"><i class="fas fa-chart-pie"></i> Photographer</h4> -->
-      <h2 class="card-title pt-2"><strong>{{user.username}} USER NAME</strong></h2>
-      <p>{{user.bio}} USER BIO GOES HERE</p>
-      <a class="btn btn-pink" href={{user.website}}><i class="fas fa-clone left"></i> View Portfolio</a>
-    </div>
-  </div>
-
-</div>
-<!-- Card -->
-
-
-</div>
-                
-
-            </div>
-        </div>
-    </section>
 
 <script src="/javascript/add-post.js"></script>
 
-
-
-
-{{!-- 
-{{#if posts.length}}
-<section>
-    <h2>Dashboard</h2>
-    <ul class="post-list">
-        {{#each posts as |post|}}
-        <li>
-            {{> post-info post}}
-            <a href="/dashboard/edit/{{post.id}}" class="edit-link">edit post</a>
-        </li>
-        {{/each}}
-    </ul>
-</section>
-{{/if}} --}}
-
-{{!-- <button type="submit" class="btn" id="create-new-post">+ Create new post</button> --}}
