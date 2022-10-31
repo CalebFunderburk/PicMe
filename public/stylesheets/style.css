@@ -135,7 +135,7 @@ button {
 }
 
 button:hover {
-  background-color: rgba(111, 203, 231, 0.25);
+  background-color: #3377ff;
 }
 
 
@@ -149,7 +149,7 @@ input {
 textarea:focus,
 input:focus {
   outline: none;
-  border: 1px solid #3486eb;
+  border: 1px solid #3377ff;
 }
 
 textarea {
@@ -167,7 +167,7 @@ form label {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #225ca3;
+  color: #3377ff;
   font-size: 100%;
   font-weight: bold;
   transition: color .1s;
@@ -176,7 +176,7 @@ form label {
 
 .btn-no-style:hover {
   background: none;
-  color: #3486eb;
+  color: #3377ff;
 }
 
 .delete-post-btn {
@@ -197,12 +197,12 @@ form label {
 }
 
 .upvote-btn {
-  background-color: #1060b5;
+  background-color: #3377ff;
   transition: background-color .1s;
 }
 
 .upvote-btn:hover {
-  background-color: #1060b5;
+  background-color: #3377ff;
 }
 
 .comment-form {

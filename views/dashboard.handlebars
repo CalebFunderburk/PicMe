@@ -22,17 +22,17 @@
   {{#if posts.length}}
   <section class="mt-5">
     <h2 class="fw-bold">Your Posts</h2>
-    <div class=" container py-2 align-items bg-secondary">
+    <div class=" container py-2 align-items">
       <div>
         {{#each posts as |post|}}
         <div>
 
 
 
-          <div class="card mb-4 mx-auto" style="width: 80%">
-            <div class="container row mx-auto" style="width: 80%">
-              <div class="card-header align-center col-md-6 bg-secondary">
-                <h5 class="card-title text-black fw-bold">{{title}}</h5>
+          <div class="card mb-4 mx-auto w-75 px-0">
+            <div class="container row mx-auto" style="width: 90%">
+              <div class="card-header col-md-6" style="background-color: #3377ff">
+                <h5 class="card-title text-light fw-bold">{{title}}</h5>
               </div>
 
               <div class="container col-md-4 align-center mt-4">
@@ -54,7 +54,7 @@
                   <i class="fas fa-calendar-alt"></i> {{format_date created_at}}
                 </div>
                 <div class="col">
-                  <a href="/dashboard/edit/{{post.id}}" class="edit-link nav-link">Edit post</a>
+                  <a href="/dashboard/edit/{{post.id}}" class="edit-link nav-link link-primary">Edit post</a>
                 </div>
               </div>
 
