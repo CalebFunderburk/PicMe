@@ -15,21 +15,23 @@
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
+  text-shadow: none; 
 }
 
 
 /*
- * Base structure
+ * Base structure for Body
  */
 
 body {
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+
 }
 
 .cover-container {
   max-width: 42em;
+
 }
 
 
@@ -39,12 +41,14 @@ body {
 
  .btn-link {
   text-decoration: none;
+  border-radius: none;
  }
 
 .nav-masthead .nav-link, 
 .nav-masthead .btn-link {
   color: rgba(255, 255, 255, .5);
   border-bottom: .25rem solid transparent;
+ 
 }
 
 .nav-masthead .nav-link:hover,
@@ -52,6 +56,7 @@ body {
 .nav-masthead .btn-link:hover,
 .nav-masthead .btn-link:focus {
   border-bottom-color: rgba(255, 255, 255, .25);
+ 
 }
 
 .nav-masthead .nav-link + .nav-link,
@@ -67,32 +72,6 @@ body {
 
 /* -- Landing page styling and Navbar --*/
 
-
-/* .bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-
-} */
-
-/* @media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-} */
-
-/* .b-example-divider {
-  height: 3rem;
-  background-color: rgba(0, 0, 0, .1);
-  border: solid rgba(0, 0, 0, .15);
-  border-width: 1px 0;
-  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-}
-
-.b-example-vr {
-  flex-shrink: 0;
-  width: 1.5rem;
-  height: 100vh;
-} */
 
 .bi {
   vertical-align: -.125em;
@@ -158,10 +137,6 @@ body {
     background-color:  rgba(111, 203, 231, 0.25);
   }
   
-  /* .post-list {
-    margin: 0;
-    padding: 0;
-  } */
   
   textarea, input {
     padding: .5%;
@@ -179,9 +154,9 @@ body {
     min-height: 100px;
   }
   
-  form > div {
+  /* form > div {
     margin-bottom: 2%;
-  }
+  } */
   
   form label {
     display: block;
