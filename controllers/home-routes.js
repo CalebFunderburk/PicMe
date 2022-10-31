@@ -89,6 +89,10 @@ router.get('/post/:id', (req, res) => {
     });
 });
 
+router.get('/learn', (req, res) => {
+    res.render('learn')
+})
+
 router.get('/', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/home');

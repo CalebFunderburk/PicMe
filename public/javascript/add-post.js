@@ -18,7 +18,7 @@ async function newFormHandler(event) {
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert(response.statusText);
+      alert('Your link field must include an active link');
     }
   }
   

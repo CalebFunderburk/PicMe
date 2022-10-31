@@ -15,9 +15,9 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/home');
       } else {
-        alert(response.statusText);
+        alert('This user information does not match any found in our records. Please try a new email or password!');
       }
     }
   }
@@ -41,9 +41,9 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/dashboard');
+        document.location.replace('/home');
       } else {
-        alert(response.statusText);
+        alert('This user may already exist in our records. Your username must be between 1 and 30 characters long, your email must be in email format, and your password must be at least 4 characters long. Please try again!');
       }
     }
   }
