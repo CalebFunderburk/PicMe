@@ -4,10 +4,11 @@
 <!-- Displays user-profile section -->
 
  {{>user-profilecard}}   
+
 <!-- Homepage Posts Feed -->
 
-<section class="row container-fluid"
 
+<div class="container-fluid justify-center mt-4">
 <ul class="post-list">
     {{#each posts as |post|}}
   <li>
@@ -16,4 +17,4 @@
   {{/each}}
 </ul>
 
-</section>
+</div>

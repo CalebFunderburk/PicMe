@@ -3,9 +3,10 @@
 
 <!-- include form and comments -->
 {{#if loggedIn}}
+<div class="align-center">
 <form class="comment-form">
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea name="comment-body" placeholder="We'd love to hear from you"></textarea>
   </div>
 
   <div>
@@ -13,6 +14,7 @@
     <button type="button" class="upvote-btn">Like</button>
   </div>
 </form>
+</div>
 {{/if}}
 
 {{>comments post.comments}}
