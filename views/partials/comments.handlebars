@@ -1,13 +1,14 @@
 <!-- Handles comments section -->
-<div class="comments">
-  {{#each this}}
-  <section class="comment">
-    <div class="text">
-      {{comment_text}}
-    </div>
-    <div class="card-footer" <div class="meta">
-      {{user.username}} on {{format_date created_at}}
-    </div>
-  </section>
-{{/each}}
-</div>
+<h4>Comments</h4>
+  <div class="comments w-75 mx-auto">
+    {{#each this}}
+    <section class="comment rounded-1">
+      <div class="text">
+        {{comment_text}}
+      </div>
+      <div class="card-footer meta">
+        {{user.username}} on {{format_date created_at}}
+      </div>   
+    </section>
+  {{/each}}
+  </div>

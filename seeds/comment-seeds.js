@@ -4,7 +4,7 @@ const { Comment } = require('../models')
 // Data to seed
 const commentdata = [
   {
-    comment_text: 'I wished I could help you! I was just there last week.',
+    comment_text: 'I wish I could help you! I was just there last week.',
     user_id: 6,
     post_id: 1
   },
