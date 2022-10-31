@@ -1,17 +1,31 @@
 # Pic Me 
 
-# Description
-PicMe is an application where photographers can make an account to display their work to potential customers and collaborate with other photographers. Clients can also use the app to connect to photographers about their rates and work. Photographers can use their accounts to post their work for potential clients to see, and for other photographers to look at. PicMe offers users full CRUD capabilites and allows users to manage their work. Users can look up tags, genres, or themes for different posts from users to find a photographer they are interested in.
+## Description
+PicMe is the place for photographers and clients can connect to build new relationships and strengthen exisiting ones. We like to think of our community as a place where you can share ideas, collaborate with others, or learn about the latest news regarding the industry. Photographers can use their accounts to post for potential clients to see, and for other photographers to look at. PicMe offers users full CRUD capabilites and allows users to manage their work. PicMe currently uses a system based on relevancy to display posts to the user.
 
-# Usage
-A user will either sign in with their username or password or if they are new to Pic Me they will create an account my setting up credentials.
+## Deployed Website
 
-Once logged in and/or the account has been created the user will then be directed to our user dashboard where they can view recent work and search through tags to find the exact photograpy they are looking for. 
 
-# Deployed Website
 
-# Github Repo
+## Built With:
+
+- JavaScript
+- Node.JS
+- Express.JS
+- Bootstrap
+- Handlebars.JS
+- Heroku
+- MySQL
+- Sequelize
+- Node NPM Packages
 
 # Screenshot
-![image](https://user-images.githubusercontent.com/107800173/199110955-dc80bc79-0f64-4bd6-9381-9dd0cd44b939.png)
 
+![Screenshot of website](./public/assets/picme-screenshot.png)
+
+## Contributions
+
+- Caleb Funderburk
+- Dane Cronin
+- Dejah Harris
+- Connor Kelly
