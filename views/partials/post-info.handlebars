@@ -1,55 +1,28 @@
-
 <!-- Styling for each post on Profile/Dashboard Page -->
 
-<div class="card mb-5 w-75">
-  <div>
-     <div class="card-header text-center align-center mb-4 bg-secondary opacity-50">
-    <h5 class="card-title text-black fw-bold">{{title}}</h5>
-      </div>
-    {{!-- <p class="card-text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad alias, aliquid amet aspernatur atque
-      culpa cum debitis dicta doloremque, dolorum ea eos et excepturi explicabo facilis harum illo impedit incidunt
-      laborum laudantium...
-    </p> --}}
-    <a href="{{post_url}}" target="_blank" class="btn btn-primary mb-6 fw-bold">Read More</a>
-    <span class="text-muted fw-bold">({{format_url post_url}})</span>
 
-    <p class="card-text px-1"><small class="text-muted fw-bold"><i class="fa-regular fa-heart px-1"></i> {{vote_count}} {{format_plural
-        "Like" vote_count}} <i class="far fa-user px-1"></i> {{user.username}} <span class="px-2"> <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a></span></small></p>
+
+
+<div class="card mb-4 w-75">
+  <div class="container row">
+    <div class="card-header align-center col-md-6 bg-secondary opacity-50">
+      <h5 class="card-title text-black fw-bold">{{title}}</h5>
+    </div>
+
+    <div class="col-md-4 align-center mt-4">
+      <a href="{{post_url}}" target="_blank" class="btn btn-primary fw-bold">Read More</a>
+      <span class="text-muted fw-bold py-1 px-2">({{format_url post_url}})</span>
+    </div>
+    <div class="col-md-4 py-1">
+      <p class="card-text px-1"><small class="text-muted fw-bold"><i class="fa-regular fa-heart px-1"></i>
+          {{vote_count}} {{format_plural
+          "Like" vote_count}} <i class="far fa-user px-1"></i> {{user.username}} <span class="px-2"> <a
+              href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a></span></small></p>
+    </div>
+
     <div class="card-footer text-muted">
       <i class="fas fa-calendar-alt"></i> {{format_date created_at}}
     </div>
 
   </div>
 </div>
-
-
-
-
-
-
-<!-- Alternate styling -->
-
-
-
-{{!-- <div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body text-center">
-
-        <h3>{{title}}</h3>
-
-        <a href="{{post_url}}" target="_blank" class="btn btn-primary">Read More</a>
-        <span>({{format_url post_url}})</span>
-
-        <div class="card-footer text-muted mt-2">
-          <div class="meta">
-            {{vote_count}} {{format_plural "Like" vote_count}} by {{user.username}} on
-            {{format_date created_at}}
-            |
-            <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-          </div>
-        </div>
-      </div>
-
-    </div> --}}
