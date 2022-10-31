@@ -34,8 +34,9 @@ router.get('/home', (req, res) => {
 
       res.render('homepage', {
         posts,
-        loggedIn: req.session.loggedIn
-      })
+        loggedIn: req.session.loggedIn,
+        username:req.session.username
+      });
     })
     .catch(err => {
       console.log(err)

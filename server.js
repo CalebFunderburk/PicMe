@@ -35,9 +35,6 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 
-//Index Route
-//app.get('/',  (req,res) => res.render('index', {layout: landingpage}))
-
 // Plug in routes
 app.use(require('./controllers/'))
 

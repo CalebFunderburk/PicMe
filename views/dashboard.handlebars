@@ -7,15 +7,17 @@
       <input type="text" placeholder="Enter Post Title" id="post-title" name="post-title" />
     </div>
     <div>
-      <label for="post-url">Email</label>
+      <label for="post-url" class="mt-2">Email</label>
       <input id="post-url" placeholder="JohnDoe@mail.com" name="post-url" />
     </div>
-    <button type="submit" class="btn mb-6 bg-light">Create</button>
+    <button type="submit" class="btn mt-5 mb-6 bg-light">Create</button>
   </form>
-</section>
+  </section>
 
-<!-- Users current posts -->
-<section class="container mt-3 justify-center bg-secondary">
+
+<!-- Section displaying user's posts -->
+
+<section class="container mt-3 justify-center">
 
   {{#if posts.length}}
   <section class="mt-5">
@@ -29,7 +31,7 @@
 
           <div class="card mb-4 mx-auto" style="width: 80%">
             <div class="container row mx-auto" style="width: 80%">
-              <div class="card-header align-center col-md-6 bg-secondary opacity-50">
+              <div class="card-header align-center col-md-6 bg-secondary">
                 <h5 class="card-title text-black fw-bold">{{title}}</h5>
               </div>
 

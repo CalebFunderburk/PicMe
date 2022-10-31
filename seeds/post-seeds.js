@@ -40,7 +40,7 @@ const postdata = [
   },
   {
     title: 'Does anyone know what this rule of thirds thing everyone is talking about?',
-    post_url: 'turner@mail.com',
+    post_url: 'sergio@mail.com',
     user_id: 1
   },
   {
@@ -49,7 +49,7 @@ const postdata = [
     user_id: 9
   },
   {
-    title: 'Share your portfolios in this thread!',
+    title: 'What jobs did everyone shoot this weekend? I got to take some pictures for a local car dealership!',
     post_url: 'eden@mail.com',
     user_id: 5
   },
