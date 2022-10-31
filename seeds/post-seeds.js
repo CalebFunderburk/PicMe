@@ -2,104 +2,103 @@ const { Post } = require('../models');
 
 const postdata = [
   {
-    title: 'Donec posuere metus vitae ipsum.',
-    post_url: 'https://buzzfeed.com/in/imperdiet/et/commodo/vulputate.png',
+    title: 'Looking for a photographer in the Manhattan area.',
+    post_url: 'leonard@mail.com',
     user_id: 10
   },
   {
-    title: 'Morbi non quam nec dui luctus rutrum.',
-    post_url: 'https://nasa.gov/donec.json',
+    title: 'Join my photo editing Discord!',
+    post_url: 'suzy@mail.com',
     user_id: 8
   },
   {
-    title: 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.',
-    post_url: 'https://europa.eu/parturient/montes/nascetur/ridiculus/mus/etiam/vel.aspx',
+    title: 'Need wedding photographer!',
+    post_url: 'sergio@mail.com',
     user_id: 1
   },
   {
-    title: 'Nunc purus.',
-    post_url: 'http://desdev.cn/enim/blandit/mi.jpg',
+    title: 'Does anyone know anything about F stop?',
+    post_url: 'linda@mail.com',
     user_id: 4
   },
   {
-    title: 'Pellentesque eget nunc.',
-    post_url: 'http://google.ca/nam/nulla/integer.aspx',
+    title: 'Looking to collaborate with a videographer.',
+    post_url: 'oscar@mail.com',
     user_id: 7
   },
   {
-    title: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
-    post_url: 'https://stanford.edu/consequat.png',
+    title: 'Sonys new A7R is the coolest thing ever!',
+    post_url: 'linda@mail.com',
     user_id: 4
   },
   {
-    title: 'In hac habitasse platea dictumst.',
-    post_url: 'http://edublogs.org/non/ligula/pellentesque.js',
+    title: 'Sigma lens appreciation post.',
+    post_url: 'sergio@mail.com',
     user_id: 1
   },
   {
-    title: 'Morbi non quam nec dui luctus rutrum.',
-    post_url: 'http://ucla.edu/consequat/nulla.html',
+    title: 'Does anyone know what this rule of thirds thing everyone is talking about?',
+    post_url: 'turner@mail.com',
     user_id: 1
   },
   {
-    title: 'Duis ac nibh.',
-    post_url: 'http://theguardian.com/dui/vel/nisl/duis/ac/nibh.aspx',
+    title: 'I really want to take some night time city photos but dont know what settings I should start with. HELP!',
+    post_url: 'chuck@mail.com',
     user_id: 9
   },
   {
-    title: 'Curabitur at ipsum ac tellus semper interdum.',
-    post_url: 'https://reverbnation.com/ligula/sit.jpg',
+    title: 'Share your portfolios in this thread!',
+    post_url: 'eden@mail.com',
     user_id: 5
   },
   {
-    title: 'In hac habitasse platea dictumst.',
-    post_url: 'http://china.com.cn/lectus/vestibulum.json',
+    title: 'Is anyone looking for a partner to do some projects with?',
+    post_url: 'andrea@mail.com',
     user_id: 3
   },
   {
-    title: 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.',
-    post_url: 'http://networksolutions.com/nam/ultrices/libero/non/mattis/pulvinar.json',
+    title: 'Need help learning lightroom/photoshop? Email me!',
+    post_url: 'leonard@mail.com',
     user_id: 10
   },
   {
-    title: 'Donec dapibus.',
-    post_url: 'https://instagram.com/ac/neque/duis/bibendum/morbi/non.xml',
+    title: 'Canon vs Sony, which is the better buy?',
+    post_url: 'suzy@mail.com',
     user_id: 8
   },
   {
-    title: 'Nulla tellus.',
-    post_url: 'https://lycos.com/natoque/penatibus/et.html',
+    title: 'Car owner looking for photographer.',
+    post_url: 'andrea@mail.com',
     user_id: 3
   },
   {
-    title: 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.',
-    post_url: 'https://gmpg.org/lorem.jpg',
+    title: 'Link your favorite works in this thread! Trying to draw some inspiration.',
+    post_url: 'andrea@mail.com',
     user_id: 3
   },
   {
-    title:
-      'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.',
-    post_url: 'https://paginegialle.it/mattis/egestas.jsp',
+    title: 'Does anyone know where I can learn how to use a drone?',
+    post_url: 'oscar@mail.com',
     user_id: 7
   },
   {
-    title: 'In hac habitasse platea dictumst.',
-    post_url: 'http://wikia.com/turpis/eget.jpg',
+    title: 'I used a GoPro for my first time this weekend and I loved it! What a nifty device.',
+    post_url: 'timmy@mail.com',
     user_id: 6
   },
   {
-    title: 'Etiam justo.',
-    post_url: 'https://shareasale.com/quis.json',
+    title: 'Does anyone have a 50mm lens theyre trying to sell?',
+    post_url: 'linda@mail.com',
     user_id: 4
   },
   {
-    title: 'Nulla ut erat id mauris vulputate elementum.',
-    post_url: 'http://java.com/diam/neque/vestibulum/eget/vulputate/ut/ultrices.png',
+    title: 'Photographer in the Pittsburgh area looking for work. Email me for my rates and availability!',
+    post_url: 'timmy@mail.com',
     user_id: 6
   },
   {
-    title: 'Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
-    post_url: 'https://java.com/at/nibh/in.png',
+    title: 'Whats your favorite kind of photography? Comment and let us know!',
+    post_url: 'oscar@mail.com',
     user_id: 7
   }
 ];
