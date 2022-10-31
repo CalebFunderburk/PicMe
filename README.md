@@ -1,1 +1,1 @@
-# just-tech-news
+# PicMe
