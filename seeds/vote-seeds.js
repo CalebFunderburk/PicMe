@@ -1,5 +1,7 @@
-const { Vote } = require('../models');
+// Imports
+const { Vote } = require('../models')
 
+// Data to seed
 const votedata = [
   {
     user_id: 9,
@@ -189,8 +191,10 @@ const votedata = [
     user_id: 3,
     post_id: 4
   }
-];
+]
 
-const seedVotes = () => Vote.bulkCreate(votedata);
+// Function to seed data
+const seedVotes = () => Vote.bulkCreate(votedata)
 
-module.exports = seedVotes;
+// Exports
+module.exports = seedVotes

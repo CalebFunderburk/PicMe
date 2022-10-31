@@ -1,5 +1,7 @@
-const { Post } = require('../models');
+// Imports
+const { Post } = require('../models')
 
+// Data to seed
 const postdata = [
   {
     title: 'Looking for a photographer in the Manhattan area.',
@@ -101,8 +103,10 @@ const postdata = [
     post_url: 'oscar@mail.com',
     user_id: 7
   }
-];
+]
 
-const seedPosts = () => Post.bulkCreate(postdata);
+// Function to seed data
+const seedPosts = () => Post.bulkCreate(postdata)
 
-module.exports = seedPosts;
+// Exports
+module.exports = seedPosts

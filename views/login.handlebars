@@ -1,65 +1,58 @@
-<main class="px-3">
-    {{!-- <h1>PicMe.</h1> --}}
+<!-- Link to learn more page -->
+<div class="px-3">
     <h3 class="mb-3"> A new community for photography</h3>
     <p class="lead">
         <a href="/learn" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
     </p>
 
+    <!-- Login and signup section -->
+    <div class="row align-items-center mt-4">
+        <div class="container col-md-6 mt-3 mb-2">
+            <h3 class="fw-bold">LOGIN</h3>
+            <p class="text-muted">Please enter your login and password!</p>
+            <form class="login-form ">
+                <div>
+                    <label for="email-login"></label>
+                    <input type="text" placeholder="email" id="email-login" class="mt-2" />
+                </div>
+                <div>
+                    <label for="password-login"></label>
+                    <input type="password" placeholder="password" id="password-login" class="mt-2" />
+                </div>
 
-    <!-- Login and SignUp Section -->
-   
-        <div class="row align-items-center mt-4">
+                <div>
+                    <button type="submit" class="px-3 mt-2 fw-bold">login</button>
+                </div>
+            </form>
 
+            <!-- Sigup form -->
+            <form class="signup-form mt-5">
+                <h3 class="fw-bold">New? Join Us!</h3>
+                <div>
+                    <label for="username-signup"></label>
+                    <input type="text" placeholder="username" id="username-signup" class="mt-2" />
+                </div>
+                <div>
+                    <label for="email-signup"></label>
+                    <input type="text" placeholder="email" id="email-signup" class="mt-2" />
+                </div>
+                <div>
+                    <label for="password-signup"></label>
+                    <input type="password" placeholder="password" id="password-signup" class="mt-2" />
+                </div>
 
+                <div>
+                    <button type="submit" class="px-3 mt-2 fw-bold">signup</button>
+                </div>
+            </form>
+        </div>
 
-            <div class="container col-md-6 mt-3 mb-2">
-                <h3 class="fw-bold">LOGIN</h3>
-                <p class="text-muted">Please enter your login and password!</p>
-                <form class="login-form ">
-                    <div>
-                        <label for="email-login"></label>
-                        <input type="text" placeholder="email" id="email-login" class="mt-2" />
-                    </div>
-                    <div>
-                        <label for="password-login"></label>
-                        <input type="password" placeholder="password" id="password-login" class="mt-2" />
-                    </div>
-
-                    <div>
-                        <button type="submit" class="px-3 mt-2 fw-bold">login</button>
-                    </div>
-                </form>
-
-                <form class="signup-form mt-5">
-                    <h3 class="fw-bold">New? Join Us!</h3>
-                    <div>
-                        <label for="username-signup"></label>
-                        <input type="text" placeholder="username" id="username-signup" class="mt-2"/>
-                    </div>
-                    <div>
-                        <label for="email-signup"></label>
-                        <input type="text" placeholder="email" id="email-signup" class="mt-2"/>
-                    </div>
-                    <div>
-                        <label for="password-signup"></label>
-                        <input type="password" placeholder="password" id="password-signup" class="mt-2" />
-                    </div>
-
-                    <div>
-                        <button type="submit" class="px-3 mt-2 fw-bold">signup</button>
-                    </div>
-                </form>
-            </div>
-
-            <!-- Phone Mock-Up section -->
-            <div class="col-md-6 mt-5 mb-5">
-                <img src="/assets/iphone.png" class="img-fluid" />
-            </div>
-
-
-
+        <!-- Phone mock-up section -->
+        <div class="col-md-6 mt-5 mb-5">
+            <img src="/assets/iphone.png" class="img-fluid" />
+        </div>
     </div>
+</div>
 
-</main>
-
+<!-- Logic for page -->
 <script src="/javascript/login.js"></script>

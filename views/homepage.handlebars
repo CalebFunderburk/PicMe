@@ -1,12 +1,8 @@
 <!-- Homepage displays page once logged in -->
-
 <!-- Displays user-profile section -->
-
 {{>user-profilecard}}
 
-<!-- Homepage Posts Feed -->
-
-
+<!-- Homepage posts feed -->
 <div class="container mx-auto mt-4" style="width: 75%">
   <div class="post-list">
     {{#each posts as |post|}}
@@ -15,5 +11,4 @@
     </div>
     {{/each}}
   </div>
-
 </div>

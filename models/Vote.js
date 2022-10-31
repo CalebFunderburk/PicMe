@@ -1,8 +1,11 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+// Imports
+const { Model, DataTypes } = require('sequelize')
+const sequelize = require('../config/connection')
 
-class Vote extends Model {}
+// Class definition
+class Vote extends Model { }
 
+// Model parameters
 Vote.init(
   {
     id: {
@@ -32,6 +35,7 @@ Vote.init(
     underscored: true,
     modelName: 'vote'
   }
-);
+)
 
-module.exports = Vote;
+// Exports
+module.exports = Vote

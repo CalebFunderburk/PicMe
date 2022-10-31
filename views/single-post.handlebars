@@ -1,26 +1,23 @@
+<!-- Single post view -->
 {{> post-info post}}
-
-
-<!-- include form and comments -->
 {{#if loggedIn}}
 <div class="align-center">
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body" placeholder="We'd love to hear from you"></textarea>
-  </div>
-
-  <div>
-    <button type="submit">add comment</button>
-    <button type="button" class="upvote-btn">Like</button>
-  </div>
-</form>
+  <form class="comment-form">
+    <div>
+      <textarea name="comment-body" placeholder="We'd love to hear from you"></textarea>
+    </div>
+    <div>
+      <button type="submit">add comment</button>
+      <button type="button" class="upvote-btn">Like</button>
+    </div>
+  </form>
 </div>
 {{/if}}
 
 {{>comments post.comments}}
 
-
 {{#if loggedIn}}
+<!-- Logic for page -->
 <script src="/javascript/comment.js"></script>
 <script src="/javascript/upvote.js"></script>
 {{/if}}

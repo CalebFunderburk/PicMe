@@ -1,13 +1,16 @@
-const path = require('path');
-const express = require('express');
-const session = require('express-session');
-const exphbs = require('express-handlebars');
+// Imports
+const path = require('path')
+const express = require('express')
+const session = require('express-session')
+const exphbs = require('express-handlebars')
 
-const app = express();
-const PORT = process.env.PORT || 3001;
+// Express environment setup
+const app = express()
+const PORT = process.env.PORT || 3001
 
-const sequelize = require('./config/connection');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+// Format sequelize session
+const sequelize = require('./config/connection')
+const SequelizeStore = require('connect-session-sequelize')(session.Store)
 
 const sess = {
   secret: 'Super secret secret',
@@ -17,26 +20,28 @@ const sess = {
   store: new SequelizeStore({
     db: sequelize
   })
-};
+}
 
-app.use(session(sess));
+app.use(session(sess))
 
-const helpers = require('./utils/helpers');
+// Format handlebars
+const helpers = require('./utils/helpers')
+const hbs = exphbs.create({ helpers })
+app.engine('handlebars', hbs.engine)
+app.set('view engine', 'handlebars')
 
-const hbs = exphbs.create({ helpers });
-
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+// Format express
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
+app.use(express.static(path.join(__dirname, 'public')))
 
 //Index Route
-//app.get('/',  (req,res) => res.render('index', {layout: landingpage}));
+//app.get('/',  (req,res) => res.render('index', {layout: landingpage}))
 
-app.use(require('./controllers/'));
+// Plug in routes
+app.use(require('./controllers/'))
 
+// Sync database
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
-});
+  app.listen(PORT, () => console.log('Now listening'))
+})
