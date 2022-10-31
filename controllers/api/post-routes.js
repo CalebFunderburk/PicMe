@@ -1,10 +1,9 @@
-// Imports
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Post, User, Comment, Vote } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// Get all users
+// get all users
 router.get('/', (req, res) => {
   console.log('======================');
   Post.findAll({
@@ -37,7 +36,6 @@ router.get('/', (req, res) => {
     });
 });
 
-// Get one user
 router.get('/:id', (req, res) => {
   Post.findOne({
     where: {
@@ -78,8 +76,8 @@ router.get('/:id', (req, res) => {
     });
 });
 
-// Create a user
 router.post('/', withAuth, (req, res) => {
+  // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
   Post.create({
     title: req.body.title,
     post_url: req.body.post_url,
@@ -92,8 +90,8 @@ router.post('/', withAuth, (req, res) => {
     });
 });
 
-// User route to upvote a post
 router.put('/upvote', withAuth, (req, res) => {
+  // custom static method created in models/Post.js
   Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
     .then(updatedVoteData => res.json(updatedVoteData))
     .catch(err => {
@@ -102,7 +100,6 @@ router.put('/upvote', withAuth, (req, res) => {
     });
 });
 
-// 
 router.put('/:id', withAuth, (req, res) => {
   Post.update(
     {

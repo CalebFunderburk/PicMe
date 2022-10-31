@@ -1,34 +1,35 @@
 {
-  "name": "picme",
+  "name": "photo-index",
   "version": "1.0.0",
-  "description": "PicMe is an app to connect photographers with both new clients and others to collaborate with on future projects",
+  "description": "photo-index is a new app to connect photographers, clients and others to discover and collaborate",
   "main": "server.js",
   "scripts": {
     "test": "jest",
     "start": "node server.js",
-    "seeds": "npm seeds/index.js "
+    "seeds": "node seeds/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CalebFunderburk/PicMe.git"
+    "url": "git+https://github.com/DaneCronin/just-tech-news.git"
   },
-  "author": "Stealth Pirates",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CalebFunderburk/PicMe/issues"
+    "url": "https://github.com/DaneCronin/just-tech-news/issues"
   },
-  "homepage": "https://github.com/CalebFunderburk/PicMe#readme",
+  "homepage": "https://github.com/DaneCronin/just-tech-news#readme",
   "dependencies": {
-    "bcrypt": "^5.1.0",
+    "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.5",
-    "date-fns": "^2.29.3",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2",
+    "express": "^4.18.1",
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.3",
-    "handlebars": "^4.7.7",
-    "jest": "^29.2.0",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.25.2"
+    "sequelize": "^6.23.2"
+  },
+  "devDependencies": {
+    "jest": "^29.2.0"
   }
 }

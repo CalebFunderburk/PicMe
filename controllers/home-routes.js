@@ -1,9 +1,8 @@
-// Imports
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment, Vote } = require('../models');
 
-// Get all posts for homepage
+// get all posts for homepage
 router.get('/', (req, res) => {
   console.log('======================');
   Post.findAll({
@@ -43,7 +42,7 @@ router.get('/', (req, res) => {
     });
 });
 
-// Get one post
+// get single post
 router.get('/post/:id', (req, res) => {
   Post.findOne({
     where: {
@@ -90,7 +89,6 @@ router.get('/post/:id', (req, res) => {
     });
 });
 
-// Login route
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
@@ -100,5 +98,4 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-// Exports
 module.exports = router;
