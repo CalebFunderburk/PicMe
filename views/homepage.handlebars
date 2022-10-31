@@ -1,20 +1,19 @@
-
 <!-- Homepage displays page once logged in -->
 
 <!-- Displays user-profile section -->
 
- {{>user-profilecard}}   
+{{>user-profilecard}}
 
 <!-- Homepage Posts Feed -->
 
 
-<div class="container-fluid justify-center mt-4">
-<ul class="post-list">
+<div class="container mx-auto mt-4" style="width: 75%">
+  <div class="post-list">
     {{#each posts as |post|}}
-  <li>
-    {{> post-info post}}
-  </li>
-  {{/each}}
-</ul>
+    <div>
+      {{> post-info post}}
+    </div>
+    {{/each}}
+  </div>
 
 </div>
